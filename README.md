@@ -46,6 +46,7 @@ dapp的筆記，學習sodolity相關資訊，用此筆記來撰寫
   * 是一個特殊的識別欄位，能作為filter(篩選)的搜尋目標
   * 在每個log中只能有四個
   * 第一個欄位固定為log的identifier做keccak-256(第三代安全雜湊演算法SHA-3)後的值
+
 #### multiple topics
   * 每個log可以有四個，但是第一個一定要為identifier，剩下的三個宣告方事是使用indexed modi0fier
   * 若有使用indexed modifier，此時argument就會做為一個topic存在receipt的topics中
