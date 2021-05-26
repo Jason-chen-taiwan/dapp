@@ -63,11 +63,18 @@ dapp的筆記，學習sodolity相關資訊，用此筆記來撰寫
 ```
 pragma solidity ^0.4.25;
 
-contract Example {
-    event Log(string message);
-
-    function hello() public {
-        emit Log('Hello World');
+contract Test {
+    string information;
+    uint balance;
+    
+    event LogCreate(string information, uint balance);
+    event LogCreateIndex(string indexed information, uint indexed balance);
+    
+    constructor() public {
+        information = "default";
+        balance = 100;
+        emit LogCreate(information, balance);
+        emit LogCreateIndex(information, balance);
     }
 }
 ```
